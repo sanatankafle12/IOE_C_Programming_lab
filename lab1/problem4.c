@@ -1,12 +1,13 @@
-/*Write a program to calculate area of a circle having its radius (r=5). */
+/*Write a program to read  values of x and y from the user and evaluate the expression v=x^3+y^2-100/x*/
 
 #include <stdio.h>
 
 int main()
 {
-    int radius = 5;
-    float area,pi=3.14;
-    area = pi*radius*radius;
-    printf("The area of circle having radius 5 is %.2f",area);
+    float x,y,v;
+    printf("Enter x and y: ");
+    scanf("%f %f",&x,&y);
+    v = x*x*x+y*y-100.0/x;
+    printf("v = %.2f",v);
     return 0;
 }
