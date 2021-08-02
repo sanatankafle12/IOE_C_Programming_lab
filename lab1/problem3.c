@@ -1,11 +1,13 @@
-/*Write a program to multiply two numbers (10&8) and display its product. */ 
+/*write  a program to calculate  the simple interest. Read values of P, T, R from the user*/ 
 
 #include <stdio.h>
 
 int main()
 {
-    int num1 = 10,num2 = 8, product;
-    product = num1*num2;
-    printf("The product of 10 and 8 is %d.",product);
+    float R , I,p,T;
+    printf("Enter rate, money and the time. ");
+    scanf("%f %f %f",&R,&p,&T);
+    I = p*T*R/100.0;
+    printf("The simple interest is %.2f",I);
     return 0;
 }
