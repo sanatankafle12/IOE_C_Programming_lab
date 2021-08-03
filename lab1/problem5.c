@@ -1,12 +1,14 @@
-/*Write a program to calculate area of an ellipse having its axes (minor=4cm, major=6cm)*/
+/*-Write a program to read four integers from the user and display mean of the numbers*/
 
 #include <stdio.h>
 
 int main()
 {
-   int minor =4,major =6;
-   float area, pi = 3.14;
-   area = pi*minor*major;
-   printf("The area of the ellipse with minor axis 4 and major axis 6 is %.2f cm",area);
-   return 0; 
+   int a,b,c,d;
+   float mean;
+   printf("Enter the four integers: ");
+   scanf("%d %d %d %d",&a,&b,&c,&d);
+   mean = (a+b+c+d)/4.0;
+   printf("THe mean is %.2f. ",mean);
+   return 0;
 }
