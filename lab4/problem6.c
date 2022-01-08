@@ -1,15 +1,34 @@
 //Write a program to determine all roots of a quadratic equation ax +bx+c=0. Read the values of a, b, and c from the user.
-
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-int main()
+int main() 
 {
-    float a,b,c,r1,r2;
-    printf("Enter a,b and c: ");
-    scanf("%f %f %f",&a,&b,&c);
-    r1 = (-b + pow((b*b-4*a*c),1/2))/(2*a);
-    r2 = (-b - pow((b*b-4*a*c),1/2))/(2*a);
-    printf("The two roots are %f %f",r1,r2);
+    float a, b, c, d, r1, r2, realPart, imagPart;
+    printf("Enter coefficients a, b and c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    d = b * b - 4 * a * c;
+
+    // condition for real and different roots
+    if (d > 0) {
+        r1 = (-b + sqrt(d)) / (2 * a);
+        r2 = (-b - sqrt(d)) / (2 * a);
+        printf("r1 = %.2f and r2 = %.2f", r1, r2);
+    }
+
+    // condition for real and equal roots
+    else if (d == 0) {
+        r1 = r2 = -b / (2 * a);
+        printf("r1 = r2 = %.2f;", r1);
+    }
+
+    // if roots are not real
+    else {
+        realPart = -b / (2 * a);
+        imagPart = sqrt(-d) / (2 * a);
+        printf("r1 = %.2f+%.2fi and r2 = %.2f-%.2fi", realPart, imagPart, realPart, imagPart);
+    }
+
     return 0;
-}
+} 
