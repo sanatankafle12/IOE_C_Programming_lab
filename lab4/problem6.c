@@ -9,21 +9,15 @@ int main()
     scanf("%f %f %f", &a, &b, &c);
 
     d = b * b - 4 * a * c;
-
-    // condition for real and different roots
     if (d > 0) {
         r1 = (-b + sqrt(d)) / (2 * a);
         r2 = (-b - sqrt(d)) / (2 * a);
         printf("r1 = %.2f and r2 = %.2f", r1, r2);
     }
-
-    // condition for real and equal roots
     else if (d == 0) {
         r1 = r2 = -b / (2 * a);
         printf("r1 = r2 = %.2f;", r1);
     }
-
-    // if roots are not real
     else {
         realPart = -b / (2 * a);
         imagPart = sqrt(-d) / (2 * a);
